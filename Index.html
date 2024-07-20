@@ -2,29 +2,85 @@
 <html lang="en">
 
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Ballet:opsz@16..72&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title> Landing Page | freeCodeCamp Project</title>
+    <title>Landing Page | freeCodeCamp project</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+<body>
 
-<header id="header">
-    <img id="header-img" src="" alt="">
+    <header id="header">
+        <nav id="nav-bar">
+            <ul>
+                <li><a class="nav-link" href="#header">Sign up</a></li>
+                <li><a class="nav-link" href="#video">Learn More</a></li>
+                <li><a class="nav-link" href="#form">Pricing</a></li>
+            </ul>
+        <img   id="header-img" src="" alt="">
+    </header>
 
-    <nav id="nav-bar">
-        <ul>
-            <li><a class="nav-link" href="#nav-bar"></a></l1>
-            <li><a class="nav-link" href="#header"></a></l1>
-            <li><a class="nav-link" href="#video"></a></l1>
-        </ul>
-    </nav>
+    <main>
+<!--HERO SECTION-->
+        <article id="hero">
+            <h1>
+                <span class="title--bold">Unfold</span><br>  <span class="title--fancy">Peace,</span><span class="title--bold sizedown">Discover</span><br><span class="title--fancy right">Yourself<span>
+            </h1>
 
-</header>
+            <h2>
+                Take a journey within Through
+            a yoga and meditation practice</h2>
 
-    <video id="video" src=""></video>
 
-    <form id="form" action="https://www.freecodecamp.com/email-submit">
-        <input name="email" type="email" id="email" placeholder="youremail@email.com" pattern=".+@exampl\e.com"
-            size="30">
-        <input type="submit" id="submit">
-    </form>
+            <form id="form" action="https://www.freecodecamp.com/email-submit" method="post">
+
+                <fieldset>
+                <input type="email" id="email" name="email" placeholder="youremail@email.com">
+                <input type="submit" id="submit">
+            </fieldset>
+            </form>
+
+         <button type="button"><a href="#about">Follow me!</a></button>
+        </secti>
+<!--VIDEO OF WHYS-->
+        <section>
+            <p>
+                Lorem ipsum dolor sit amet.
+            </p>
+            <iframe src="" id="video"></iframe>
+            <button>Join Now</button>
+        </section>
+    <!--PRICING CARDS AND OTHER FORM-->
+        <article>
+            <h2>
+                Programs
+            </h2>
+
+            <section class="card price__crd">
+                <h3>lorem</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam obcaecati officiis in
+                    consequuntur? Nostrum, velit!</p>
+            </section>
+
+            <section class="card price__crd">
+                <h3>lorem</h3>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+            </section>
+
+            <section class="card price__crd">
+                <h3>lorem</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+            </section>
+
+        </article>
+
+    </main>
+    <footer>
+
+
+    </footer>
+</body>
+
+</html>

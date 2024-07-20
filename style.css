@@ -1,0 +1,121 @@
+/*Reset*/
+*, *::before, *after {
+    box-sizing:border-box;
+}
+h1, h2, h3,
+html, body, header, section, footer, article,aside, ul, li, a, p, input,img, figure, iframe, video, nav{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+body, nav {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+}
+img {
+    width: 100%;
+    height: auto;
+}
+ul, li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: 0;
+}
+a {
+    font-size: .7rem;
+    text-decoration: 0;
+    color: #36749d;
+    text-shadow: 1px 1px 4px #592311;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Styles */
+/****HERO SECTION****/
+#hero {
+    height: 50vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image:url(https://c.pxhere.com/photos/c9/61/balance_beach_depth_of_field_eocks_ocean_rock_balancing_rocks_sea-932606.jpg!d);
+}
+h1 {
+    margin: 1em;
+    line-height: .8;
+    font-family: abel;
+}
+.title--underline{
+    letter-spacing: 1px;
+    text-decoration: underline;
+}
+.title--fancy {
+    text-shadow: 0 0 1px whitesmoke;
+    color: rgba(255, 255, 255, 0.824);
+    font-family: "Ballet", cursive;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 3.5rem;
+}
+.title--bold {
+    font-size:3rem;
+    color: rgba(13, 100, 118, 0.429);
+    font-family: "system-ui", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+.right{
+    margin-left: 1.3em;
+}
+h2 {
+    color:;
+    color: Whitesmoke;
+    font-weight: 900;
+    text-shadow: 0px 0px 5px black;
+    font-size: 1.5rem;
+    font-family: 'Abel', sans-serif;
+    text-align: center;
+    margin: 2em 3em;
+    padding: 1em;
+    background-color: rgba(173, 216, 230, 0.488);
+}
+fieldset {
+    justify-content: cener;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding:1em;
+    margin: 0 3em;
+}
+#email {
+    margin: 1em;.
+    color: black;
+    background-color: #15151590
+}
+#submit{
+    border-radius: 3px;
+width: 20%;
+box-shadow:0 0 5px 1px grey;
+}
+#submit:hover{
+    transform: translateY(1px);
+    transition: all 0.30s;
+    box-shadow: inset 0 0 5px 1px grey;
+}
+section {
+    margin: 5rem auto;
+}
+.card{
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 0 1px 2px whitesmoke;
+    width: 30%;
+    height: auto;
+
+}
+/*
+background:linear-gradient(#36749d, #5093c7, black);
+}*/
