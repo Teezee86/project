@@ -1,23 +1,67 @@
 /*Reset*/
-*, *::before, *after {
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+    overflow-wrap:break-word;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+*, *::before, *::after {
     box-sizing:border-box;
 }
-h1, h2, h3,
-html, body, header, section, footer, article,aside, ul, li, a, p, input,img, figure, iframe, video, nav{
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-}
+
 body, nav {
     display: flex;
     flex-direction: column;
     max-width: 100%;
 }
+html {
+    scroll-behavior: smooth;
+}
 img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
 }
 ul, li{
@@ -37,31 +81,28 @@ a {
 /* Styles */
 /****HERO SECTION****/
 #hero {
-    height: 50vh;
+    padding: 2em;
+    height: 100vh;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-image:url(https://c.pxhere.com/photos/c9/61/balance_beach_depth_of_field_eocks_ocean_rock_balancing_rocks_sea-932606.jpg!d);
 }
 h1 {
-    margin: 1em;
-    line-height: .8;
+     line-height: .8;
     font-family: abel;
 }
-.title--underline{
-    letter-spacing: 1px;
-    text-decoration: underline;
-}
+
 .title--fancy {
     text-shadow: 0 0 1px whitesmoke;
     color: rgba(255, 255, 255, 0.824);
     font-family: "Ballet", cursive;
     font-optical-sizing: auto;
     font-style: normal;
-    font-size: 3.5rem;
+    font-size: 4rem;
 }
 .title--bold {
-    font-size:3rem;
+    font-size: 3.8rem;
     color: rgba(13, 100, 118, 0.429);
     font-family: "system-ui", sans-serif;
     font-weight: 900;
@@ -71,7 +112,6 @@ h1 {
     margin-left: 1.3em;
 }
 h2 {
-    color:;
     color: Whitesmoke;
     font-weight: 900;
     text-shadow: 0px 0px 5px black;
@@ -83,21 +123,46 @@ h2 {
     background-color: rgba(173, 216, 230, 0.488);
 }
 fieldset {
+    box-shadow: 0 0 20px 1px rgba(173, 216, 230, 0.888);
+    border-radius: 5px;
+    background-color: rgba(173, 216, 230, 0.488);
+    border: none;
     justify-content: cener;
     align-items: center;
     display: flex;
     flex-direction: column;
-    padding:1em;
     margin: 0 3em;
+    padding: 1em;
+}
+fieldset p {
+    color: Whitesmoke;
+    font-weight: 900;
+    text-shadow: 0px 0px 5px black;
+    font-size: 1rem;
+    font-family: 'Abel', sans-serif;
+    text-align: center;
+    margin: 2em 3em;
+    padding: 1em;
+}
+#header-img {
+    width: 10%;
+    border-radius: 50%;
+
 }
 #email {
-    margin: 1em;.
-    color: black;
-    background-color: #15151590
+    width: 80%;
+    padding: .5em;
+    background-color:rgba(245, 245, 245, 0.509); #5093c750;
+}
+#email:focus {
+    background-color: white;
+    transform: translateY(-10px);
+   transition: all 0.50s;
+    box-shadow: 0 0 20px 5px black;;
 }
 #submit{
     border-radius: 3px;
-width: 20%;
+width: 30%;
 box-shadow:0 0 5px 1px grey;
 }
 #submit:hover{
@@ -108,14 +173,57 @@ box-shadow:0 0 5px 1px grey;
 section {
     margin: 5rem auto;
 }
-.card{
+#why{
+    background-color: whitesmoke;
+    box-shadow:0 0 5px 1px whitesmoke;
+}
+#programs {
+    max-width:100%;
+
+    background-image: url(yogabeach.jpeg);
+    background-size: cover;;
+    background-repeat: no-repeat;
+
+}
+.grid-containter {
+    justify-content: space-evenly;
+    align-items: center;
+    display: grid;
+    gap: 20px;
+    grid-template-columns:  1fr 1fr;
+    grid-template-rows: auto;
+    padding: 3em;
+    width: 100%;
+    max-height: 100%;
+}
+.card{width: 80%;
+    height: 100%;
+    flex-direction: column;
+    background-color: rgba(252, 229, 159, 0.674);
     padding: 1rem;
     border-radius: 5px;
     box-shadow: 0 0 1px 2px whitesmoke;
-    width: 30%;
-    height: auto;
-
 }
-/*
-background:linear-gradient(#36749d, #5093c7, black);
-}*/
+.programs-title{
+    grid-column: 1/3;;
+    box-shadow: 0 0 5px 1px;
+    border-radius: 5px;
+}
+.price__crd-one {
+    grid-column: 1 /2;
+    grid-row: 3 / 3;
+}
+.price__crd-two {
+    grid-row: -1/ -1;
+    grid-column: 1 / 3 ;
+}
+.price__crd-three {
+    grid-row: 3/ 3
+}
+@media screen and (min-width: 800px) {
+.title--fancy,
+    .title--bold {
+        font-size: 10rem;
+        font-size: 10rem;
+    }
+}
