@@ -1,77 +1,52 @@
 /*Reset*/
-/* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
-*/
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
+html, body, div, span, iframe,
+h1, h2, h3, h4, h5, h6, p,
+a, address, img, sub, center,
 dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+fieldset, form, label,
+article, aside,  details, embed,
+figure, footer, header, hgroup, nav,
+section, summary, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
-    overflow-wrap:break-word;
+    max-width:100%;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+footer, header, hgroup,  nav, section {
+    margin: 0;
+    padding: 0;
 	display: block;
 }
 body {
+    font-family: Ubuntu, Cantarell, sans-serif;
+    font-weight: 600;
 	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+    flex-wrap:nowrap;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    font-size: 16px;
 }
 *, *::before, *::after {
     box-sizing:border-box;
 }
-
-body, nav {
-    display: flex;
-    flex-direction: column;
-    max-width: 100%;
-}
 html {
-    scroll-behavior: smooth;
-}
-img {
-    max-width: 100%;
-    height: auto;
+    scroll-behavior:smooth
 }
 ul, li{
     display: flex;
+    justify-content: space-evenly;
     align-items: center;
-    justify-content: center;
     list-style-type: 0;
 }
 a {
-    font-size: .7rem;
+    font-size: 3rem;
     text-decoration: 0;
     color: #36749d;
     text-shadow: 1px 1px 4px #592311;
@@ -80,8 +55,20 @@ a {
 
 /* Styles */
 /****HERO SECTION****/
-#hero {
-    padding: 2em;
+nav {
+    width: 100%;
+    background-color:#73b9db9f;
+    position: fixed;
+    top: 0;
+}
+nav a {
+    flex-direction: row;
+    justify-content: space-evenly;
+    display: flex;
+    font-size: 1rem;
+}
+header {
+    margin-top: 1.5em;
     height: 100vh;
     background-repeat: no-repeat;
     background-position: center;
@@ -92,14 +79,12 @@ h1 {
      line-height: .8;
     font-family: abel;
 }
-
 .title--fancy {
-    text-shadow: 0 0 1px whitesmoke;
+    text-shadow: 0 0 10px whitesmoke;
     color: rgba(255, 255, 255, 0.824);
-    font-family: "Ballet", cursive;
+    font-family: "Ballet", cursive, script;
     font-optical-sizing: auto;
-    font-style: normal;
-    font-size: 4rem;
+    font-style: normal;;
 }
 .title--bold {
     font-size: 3.8rem;
@@ -111,117 +96,217 @@ h1 {
 .right{
     margin-left: 1.3em;
 }
-h2 {
+.learnmore{
+    padding: 0;
+    margin-top: 1em;
+}
+header p{
+    line-height: 1.5;
     color: Whitesmoke;
     font-weight: 900;
     text-shadow: 0px 0px 5px black;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-family: 'Abel', sans-serif;
     text-align: center;
-    margin: 2em 3em;
+    margin: 2em 0;
     padding: 1em;
     background-color: rgba(173, 216, 230, 0.488);
-}
-fieldset {
-    box-shadow: 0 0 20px 1px rgba(173, 216, 230, 0.888);
+
     border-radius: 5px;
-    background-color: rgba(173, 216, 230, 0.488);
-    border: none;
-    justify-content: cener;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    margin: 0 3em;
-    padding: 1em;
-}
-fieldset p {
-    color: Whitesmoke;
-    font-weight: 900;
-    text-shadow: 0px 0px 5px black;
-    font-size: 1rem;
-    font-family: 'Abel', sans-serif;
-    text-align: center;
-    margin: 2em 3em;
-    padding: 1em;
+    box-shadow: 0 0 20px 1px rgba(173, 216, 230, 0.888);
 }
 #header-img {
-    width: 10%;
+    align-items: center;
+    width: 8%;
     border-radius: 50%;
-
 }
 #email {
+
+    border-radius: 4px;
+    border: none;
     width: 80%;
-    padding: .5em;
-    background-color:rgba(245, 245, 245, 0.509); #5093c750;
+    padding: 1em;
+    background-color:rgba(245, 245, 245, 0.509); color:#5093c750;
+    font-size: 1.2rem;
 }
 #email:focus {
     background-color: white;
-    transform: translateY(-10px);
+    transform: translateY(10px);
    transition: all 0.50s;
-    box-shadow: 0 0 20px 5px black;;
+    box-shadow: 0 5px 20px 2px darkgrey;
+    border: none;
+}
+fieldset{
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
 }
 #submit{
+    border: 0;
     border-radius: 3px;
-width: 30%;
-box-shadow:0 0 5px 1px grey;
+    width: 30%;
+    box-shadow:0 0 10px 1px grey;
 }
 #submit:hover{
     transform: translateY(1px);
     transition: all 0.30s;
     box-shadow: inset 0 0 5px 1px grey;
 }
+.learnmore {
+    margin: 0;
+}
+.nav-div button{
+    margin: 0;
+    padding: 1em;
+    width: 50%;
+}
 section {
-    margin: 5rem auto;
+    padding: 5em 0;
 }
 #why{
-    background-color: whitesmoke;
+    background-image: radial-gradient(circle at center bottom, rgb(253, 230, 138), rgb(124, 58, 237), rgb(12, 74, 110));
+
     box-shadow:0 0 5px 1px whitesmoke;
 }
 #programs {
     max-width:100%;
-
     background-image: url(yogabeach.jpeg);
-    background-size: cover;;
+    background-size: cover;
     background-repeat: no-repeat;
-
+}
+.programs-title{
+    line-height: 1.5;
+    color: Whitesmoke;
+    font-weight: 900;
+    text-shadow: 0px 0px 5px black;
+    font-size: 2rem;
+    font-family: 'Abel', sans-serif;
+    text-align: center;
+    margin: 2em 0;
+    padding: 1em;
+    background-color: rgba(173, 216, 230, 0.488);
+    box-shadow: 0 0 10px 1px white;
 }
 .grid-containter {
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     display: grid;
     gap: 20px;
-    grid-template-columns:  1fr 1fr;
-    grid-template-rows: auto;
+    grid-template-columns:  1fr;
+    grid-template-rows: 250px 250px 250px 250px;
     padding: 3em;
-    width: 100%;
+    max-width: 100%;
     max-height: 100%;
 }
-.card{width: 80%;
+.card{
+    line-height: 1.5;
+    margin: auto;
+    text-align: center;
+    width: 60%;
     height: 100%;
-    flex-direction: column;
     background-color: rgba(252, 229, 159, 0.674);
-    padding: 1rem;
+    padding: 1.5rem;
     border-radius: 5px;
-    box-shadow: 0 0 1px 2px whitesmoke;
-}
-.programs-title{
-    grid-column: 1/3;;
-    box-shadow: 0 0 5px 1px;
-    border-radius: 5px;
+    box-shadow: 0 0 5px 1px rgba(252, 229, 159, 0.674);
 }
 .price__crd-one {
-    grid-column: 1 /2;
-    grid-row: 3 / 3;
+    grid-column: 1 /1;
+    grid-row: 2 / 2;
+}
+.card__titles {
+    background-color: lightblue;
+    width: 100%;
+    padding: .2em;
+    font-size: 1.5rem;
+}
+dt {
+    font-size: 1.3rem;
+    color: darkslateblue;
+}
+.program-price{
+    font-size: 2.2rem;
+    color:#5093c790;
+}
+sup{
+    text-decoration: underline;
+    font-size: 1rem;
+}
+dd p {
+    color: whitesmoke;
+    font-size: 1.2rem;
 }
 .price__crd-two {
-    grid-row: -1/ -1;
-    grid-column: 1 / 3 ;
+    grid-row: 3 /3;
+    grid-column: 1 / 1 ;
 }
 .price__crd-three {
-    grid-row: 3/ 3
+    grid-row: 4 / 4;
+    grid-column: 1 / 1;
+}
+footer {
+    background-color: black;
+    color: grey;
+}
+@media screen and (min-width: 300px) and (max-width: 475px) {
+    body {
+        max-width: 100%;
+    }
+    html {
+        font-size: 10px;
+    }
+    #hero {
+        margin: 0;
+        padding: 1em;
+    }
+    #hero p {
+        font-size: 1em;
+        padding: .5em;
+        margin: 2em 1em;
+
+    }
+.nav-div {
+    font-size: 1.5rem;
+    text-align: center;
+    }
+.nav-div p {
+    color: white;
+    text-shadow: 0 0 5px black;
+ }
+ .nav-div button:hover {
+    transform:translateY(5px);
+    transition: all 0.25s;
+    box-shadow: 0 0 10px 1px black;
+ }
+   body {
+    margin: 0;
+    padding: 0;
+   }
+   .title--fancy {
+    font-family: abel;
+    font-weight: 100;
+    }
+    .title--fancy,
+    .title--bold {
+        margin: 0;
+        padding: 0;
+        font-size: calc(5rem + 1vw);
+    }
+    h1{
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+    h2 {
+        margin: 3rem 0 ;
+    }
+    fieldset,
+    #email {
+        width: 100%;
+    }
 }
 @media screen and (min-width: 800px) {
-.title--fancy,
+    .title--fancy,
     .title--bold {
         font-size: 10rem;
         font-size: 10rem;

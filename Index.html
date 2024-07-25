@@ -8,86 +8,151 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page | freeCodeCamp project</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
     <header id="header">
+        <img id="header-img" src="dragonfly-logo.jpeg" alt="Logo">
         <nav id="nav-bar">
             <ul>
                 <li><a class="nav-link" href="#header">Sign up</a></li>
+                <li></li>
                 <li><a class="nav-link" href="#video">Learn More</a></li>
                 <li><a class="nav-link" href="#form">Pricing</a></li>
             </ul>
-        <img   id="header-img" src="dragonfly-logo.jpeg" alt="">
-    </header>
+        </nav>
+        <!--HERO SECTION-->
+        <h1>
+            <span class="title--bold">Unfold</span><br> <span class="title--fancy">Peace,</span><span
+                class="title--bold sizedown">Discover</span><br><span class="title--fancy right">Yourself<span>
+        </h1>
 
-    <main>
-<!--HERO SECTION-->
-        <article id="hero">
-            <h1>
-                <span class="title--bold">Unfold</span><br>  <span class="title--fancy">Peace,</span><span class="title--bold sizedown">Discover</span><br><span class="title--fancy right">Yourself<span>
-            </h1>
-
-            <h2>
-                Take a journey within Through
-            a yoga and meditation practice</h2>
+        <p>Enter your email below and
+            take a journey within Through
+            a yoga and meditation practice</p>
 
 
-            <form id="form" action="https://www.freecodecamp.com/email-submit" method="post">
+        <form id="form" action="https://www.freecodecamp.com/email-submit" method="post">
 
-                <fieldset>
-                    <input type="email" id="email" name="email" placeholder="youremail@email.com">
-                    <input type="submit" id="submit">
+            <fieldset>
+                <input type="email" id="email" name="email" placeholder="youremail@email.com" required>
+                <input type="submit" id="submit">
 
             </fieldset>
-            </form>
+        </form>
 
-         <button type="button"><a href="#why">Follow me!</a></button>
-        </article>
-<!--VIDEO OF WHYS-->
-        <section id="why">
-            <p>
-                Lorem ipsum dolor sit amet.
-            </p>
-            <iframe src="" id="video"></iframe>
-            <button>Join Now</button>
-        </section>
-    <!--PRICING CARDS AND OTHER FORM-->
-
-    <article id="programs">
-        <div class="grid-containter">
-            <h2 class="programs-title">
-                Programs
-            </h2>
-
-            <section class="card price__crd-one">
-                <h3>New Member</h3>
-                <dl>
-                    <dt>Special Offer</dt>
-                    <dd>$30.00<br>
-                    14 day Unlimitied pass\
-                    
-                    <p>For new members only /p>
-
-                    </dl>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing .</p>
-            </sectio>
-
-            <section class="card price__crd-two">
-                <h3>lorem</h3>
-                <p>Lorem ipsum dolor sit amet consectetur.</p>
-            </section>
-
-            <section class="card price__crd-three">
-                <h3>lorem</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-            </section>
+        <div class="nav-div">
+            <p class="learnmore">To learn more: </p>
+            <button type="button">
+                <a href="#why">Follow me!</a>
+            </button>
         </div>
-        </article>
+    </header>
+    <!--VIDEO OF WHYS-->
+    <article id="benefits">
+
+        <figure>
+            <img class="om-symbol-img" src="om-yoga-symbol-fotor-bg-remover-2024052105533.png" alt="om symbol">
+        </figure>
+
+        <h2>
+            What Would You Gain From Starting a Meditation and Yoga Practice?
+        </h2>
+
+        <p>
+            Watch this video to learn more about the benefits to both your physical and mental health.
+        </p>
+
+        <iframe width="320" height="315" src="https://www.youtube.com/embed/zIUiwE0diZg?si=2nCjVnEBuTOVUlFy"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        <button>Join Now</button>
+
+        <p>
+            ...And for even further learning here follow these links to learn about the history.
+        </p>
+        <ul>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+        </ul>
+    </article>
+    <!--PRICING CARDS AND OTHER FORM-->
+    <article id="programs" class="grid__containter">
+
+        <h2>
+            Programs and Pricing
+        </h2>
+
+        <dl class="card cd__one">
+            <a class="card__link" href="#form">
+                <h3 class="card__titles">
+                    New Member
+                </h3>
+            </a>
+            <dt>Special Offer</dt>
+            <dd>
+                <span class="program-price">$30.<sup>00</sup>
+                </span>
+                <p>
+                    14 day Unlimitied pass
+                    For new members only
+                </p>
+            </dd>
+        </dl>
+
+        <dl class="card cd__two">
+            <a class="card__link" href="#form">
+                <h3 class="card__titles">
+                    New Member
+                </h3>
+            </a>
+            <dt>Special Offer</dt>
+            <dd>
+                <span class="program-price">$30.<sup>00</sup>
+                </span>
+                <p>
+                    14 day Unlimitied pass
+                    For new members only
+                </p>
+            </dd>
+        </dl>
+
+        <dl class="card cd__three">
+            <a class="card__link" href="#form">
+                <h3 class="card__titles">
+                    New Member
+                </h3>
+            </a>
+            <dt>Special Offer</dt>
+            <dd>
+                <span class="program-price">$30.<sup>00</sup>
+                </span>
+                <p>
+                    14 day Unlimitied pass
+                    For new members only
+                </p>
+            </dd>
+        </dl>
+    </article>
 
     </main>
     <footer>
+        <h3>Authors LInks</h3>
+        <a href="github.com/Teezee86">GIthub</a>
+        <a href="frontendmentor.io/Teezee86">Front End Mentor</a>
+        <h4>Contact info</h4>
+        <h4>Jacob Z.</h4>
+        <address>
+            Dayton, Ohio<br>
+            aneamil@youremail.com<br>
+        </address>
+        <hr>
+        <p>2024<br>
+            Project From <a href="freecodecamp.org">freeCodeCamp</a>'s Curriculum:<br> Respsonsive Web Design</p>
 
 
     </footer>
