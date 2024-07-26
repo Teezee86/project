@@ -1,0 +1,43 @@
+/******* RESET *******/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  * {
+    margin: 0;
+    padding:0;
+}
+html,body{
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  input, button, textarea, select {
+    font: inherit;
+  }
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  #root, #__next {
+    isolation: isolate;
+  }
+  ul, li {
+    list-style-type: 0;
+  }
+  a {
+    text-decoration: 0;
+  }
+/********* Color Palette ***********/
+root {
+ --light-blue: #999BEDS;
+ --platinum: #DCDDE0ff;
+--raisin-black: #2E2928ff;
+--timberwolf: #D2CDCAff;
+--ucla-blue: #42708Dff;
+--cinereous: #95857Bff;
+--air-force-blue: #5785A4ff;
+--umber: #594B44ff;
+}
+/***** base styles *********/
